@@ -46,6 +46,20 @@
     --paragraph-large: 500 16px/150% var(--font-family-flex);
     --paragraph-medium: 500 14px/150% var(--font-family-flex);
     --paragraph-small: 500 12px/150% var(--font-family-flex);
-    --label-medium: 700 20px/150% var(--font-family-flex);
+    --label-large: 700 20px/150% var(--font-family-flex);
+    --label-medium: 700 26px/150% var(--font-family-flex);
     --label-small: 700 16px/150% var(--font-family-flex);
+    --label-s: 700 20px/150% var(--font-family-flex);
 }
+
+body{
+    background-color: var(--background-primary);
+    background-image: url(/assets/Shapes.png);
+    padding: 74px 120px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 108px;
+    align-items: center;
+}
+

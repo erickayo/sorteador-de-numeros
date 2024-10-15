@@ -1,0 +1,39 @@
+main{
+    width: 520px;
+}
+
+#main-header{
+    margin-top: 89px; 
+        
+    p{
+        font:var(--overline);
+        color: var(--content-primary);
+    }
+
+    h1{
+        font: var(--display-large);
+        color: var(--content-primary);
+    }
+}
+
+.qA{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 36px;
+
+    .headline{
+        color: var(--content-brand);
+        font: var(--paragraph-medium);
+    }
+    
+    .text{
+        color: var(--content-secondary);
+        font: var(--paragraph-small); text-transform: none;
+    }
+    
+    .itens{
+        width: 358px;
+    }
+}
+
