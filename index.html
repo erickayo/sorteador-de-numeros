@@ -50,7 +50,7 @@
             <p>defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
         </header>
 
-        <form>
+        <form id="form">
             <div class="fieldset">
                 <fieldset>
                     <legend>Números</legend>
@@ -73,6 +73,17 @@
 
             <button type="submit">Sortear <img src="/assets/icons/arrow.svg" alt=""></button>
         </form>
+
+        <div id="result-container">
+            <div>
+                <h3>Resultado do sorteio</h3>
+                <p>1º resultado</p>
+            </div>
+            <p class="result">1</p>
+        </div>
+
+        <button id="retry-button">Sortear Novamente</button>
+
         </aside>
     
     <script src="script.js"></script>

@@ -73,3 +73,45 @@ button{
     color: #FFFFFF;
     font: var(--label-small);
 }
+
+#result-container{
+    text-align: center;
+
+    div{
+        margin-bottom: 10px;
+    }
+    .result{
+        color: var(--content-brand);
+        font: var(--display-medium);
+    }
+
+    p{
+        color: var(--content-secondary);
+        font: var(--overline);
+    }
+
+    h3{
+        color: var(--content-primary);
+        font: var(--label-large);
+    }
+
+   display: none;
+}
+
+#retry-button{
+    all: unset;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    padding-block: 14px ;
+    border-radius: 8px;
+
+    margin-top: 40px;
+    width: 100%;
+    background-color: var(--background-tertiary);
+    color: #FFFFFF;
+    font: var(--label-small);
+    display: none;
+}
