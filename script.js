@@ -4,6 +4,7 @@ const quantity = document.getElementById("quantity");
 const final = document.getElementById("final-number");
 const resultContainer = document.getElementById("result-container");
 const asideHeader = document.getElementById("aside-header"); // Referência ao cabeçalho
+const retryButton = document.getElementById("retry-button"); // Referência ao botão "Sortear Novamente"
 
 // Declarando e inicializando o array para armazenar os valores
 let numbersArray = [];
@@ -68,7 +69,7 @@ function displayResults(numbers) {
 
     // Adiciona o subtítulo
     const headerSubTitle = document.createElement("p");
-    headerSubTitle.textContent = "1º resultado";
+    headerSubTitle.textContent = "resultado";
     headerDiv.appendChild(headerSubTitle);
 
     resultContainer.appendChild(headerDiv);
@@ -77,7 +78,7 @@ function displayResults(numbers) {
     numbers.forEach((number, index) => {
         const resultParagraph = document.createElement("p");
         resultParagraph.className = "result";
-        resultParagraph.textContent = `${index + 1}º: ${number}`;
+        resultParagraph.textContent = ` ${number}`;
         resultContainer.appendChild(resultParagraph);
     });
 
@@ -85,4 +86,17 @@ function displayResults(numbers) {
     resultContainer.style.display = "block";
     form.style.display = "none";
     asideHeader.style.display = "none";
+
+    // Mostra o botão "Sortear Novamente"
+    retryButton.style.display = "block";
 }
+
+retryButton.onclick = () => {
+    console.log("Botão 'Sortear Novamente' clicado.");
+
+    // Restaura o estado inicial da página
+    resultContainer.style.display = "none";
+    retryButton.style.display = "none";
+    form.style.display = "block";
+    asideHeader.style.display = "block";
+};

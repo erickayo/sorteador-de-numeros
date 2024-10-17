@@ -55,6 +55,8 @@ fieldset{
         color: var(--content-primary);
         font: var(--paragraph-small); text-transform: none;
     }
+
+    display: none;
 }
 
 button{
@@ -104,6 +106,8 @@ button{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    text-align: center;
 
     padding-block: 14px ;
     border-radius: 8px;
