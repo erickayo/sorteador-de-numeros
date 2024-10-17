@@ -20,5 +20,30 @@ form.onsubmit = (event) => {
 
     // Loop para gerar os números e armazená-los no array
     for (let step = initial.value; step <= final.value; step++) {
-        console.log(step)
-    }}
+        numbersArray.push(step);
+    }
+
+    console.log("Números gerados:", numbersArray);
+
+    // Verifica se há números suficientes para selecionar a quantidade desejada
+    if (numbersArray.length >= newSubmit.quantity) {
+        const selectedNumbers = getRandomNumbersFromArray(numbersArray, newSubmit.quantity);
+        console.log("Números aleatórios selecionados:", selectedNumbers);
+    } else {
+        console.log("Número insuficiente de elementos para selecionar a quantidade desejada.");
+    }
+};
+
+// Função para pegar `n` números aleatórios de um array
+function getRandomNumbersFromArray(arr, n) {
+    let result = [];
+    let tempArray = [...arr]; // Cria uma cópia do array para não modificar o original
+
+    for (let i = 0; i < n; i++) {
+        const randomIndex = Math.floor(Math.random() * tempArray.length);
+        result.push(tempArray[randomIndex]);
+        tempArray.splice(randomIndex, 1); // Remove o número selecionado para evitar duplicados
+    }
+
+    return result;
+}
